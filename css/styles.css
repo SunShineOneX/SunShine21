@@ -1,3 +1,38 @@
 body {
     background-color: #abc2e8;
 }
+
+.child1 {
+    text-align: center;
+    padding-top: 50vh;
+}
+
+.child2 {
+    text-align: center;
+    padding-top: 9vh;
+}
+
+#hit {
+    text-align: center;
+    cursor: pointer;
+    padding: 3vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 7vh;
+}
+
+#stand {
+    text-align: center;
+    cursor: pointer;
+    padding: 3vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#deal {
+    text-align: center;
+    cursor: pointer;
+    padding: 3vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+}

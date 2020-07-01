@@ -25,49 +25,87 @@
 // You can only double/split on the first move, or first move of a hand created by a split.
 // You cannot play on two aces after they are split.
 // You can double on a hand resulting from a split, tripling or quadrupling you bet.
-
-class Deck {
-    constructor(suite, name, value) {
-        this.suite = suite;
-        this.name = name;
-        this.value = value;
-    }
-} 
-
-const deck = {
-    suites: ["Spades", "Clubs", "Hearts", "Diamonds"],
-    values: [ "Ace",2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"]
+const dealer = {
+    hand: []
 }
 
-// How to populate a new array?
+const player1 = {
+    hand: [],
+    money: 500
+};
+
+
+// class Deck {
+//     constructor(suite, name, value) {
+//         this.suite = suite;
+//         this.name = name;
+//         this.value = value;
+//     }
+// }
+
+// Declare Suites and their values
+let suites = ["Spades", "Clubs", "Hearts", "Diamonds"];
+let values = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"];
+
+// Function to create the deck
+let createDeck = () => {
+    let deck = new Array();
+    for (let x = 0; x < suites.length; x++) {
+        for (let y = 0; y < values.length; y++) {
+            let thisCard = {
+                Value: values[y],
+                Suite: suites[x]
+            };
+            deck.push(thisCard);
+        }
+    }
+    return deck;
+}
+
+console.log(createDeck())
+
+// How to populate a new array? Make each suite an array. Each card is an object. ex.  
 // LOL :]
-console.log(deck);
+// console.log(deck);
 
 
 // ============================================================
 // Game Start function ========================================
 // ============================================================
 
-gameStart = () => {
-    drawCards;
-}
+// gameStart = () => {
+//     drawCards;
+// }
 
 
 // ============================================================
 // Dealer Logic ===============================================
 // ============================================================
 
-let dealerLogic = () => {
-    if (dealersCards < 17) {
-        draw();
-    } else if (dealersCards >= 17)
-        stand();
-}
+// let dealerLogic = () => {
+//     if (dealersCards < 17) {
+//         draw();
+//     } else if (dealersCards >= 17)
+//         stand();
+// }
 
 // ============================================================
 // Deal function ==============================================
 // ============================================================
+//  
+let playerDeal = () => {
+    while (player1.bank > 0) {
+        player1.hand = deck.push()
+        
+    }
+}
 
+console.log(playerDeal);
+
+// Dealers draws 2 cards
+// Player draws 2 cards
+// Evaluate but players cards and if anyone has hit 21 or not
+// Do you want to hit, stand, or stay?
 
 
 // ============================================================
