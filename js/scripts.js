@@ -33,7 +33,7 @@ const player1 = {
     hand: [],
     money: 500
 };
-
+// console.log(player1.money);
 
 // class Deck {
 //     constructor(suite, name, value) {
@@ -60,9 +60,36 @@ let createDeck = () => {
         }
     }
     return deck;
+
 }
 
-console.log(createDeck())
+let deck1 = createDeck()
+
+// let shuffleDeck = () => {
+
+// }
+// console.log(deck1);
+
+let randomCard =((Math.floor(Math.random() * (52 - 0)) + 0));
+
+let shuffleDeck = (shuffleQuantity) => {
+    let shuffleSpot1;
+    let shuffleSpot2;
+    for (let i = 0; i < shuffleQuantity; i++) {
+        shuffleSpot1 = ((Math.floor(Math.random() * (52 - 0)) + 0));
+        shuffleSpot2 = ((Math.floor(Math.random() * (52 - 0)) + 0));
+        let temporaryPlaceHolder = deck1[shuffleSpot1];
+
+        deck1[shuffleSpot1] = deck1[shuffleSpot2];
+        deck1[shuffleSpot2] = temporaryPlaceHolder;
+    }
+    return deck1;
+}
+
+let shuffledDeck = shuffleDeck(800)
+console.log(shuffledDeck);
+// console.log(shuffleDeck(500));
+// console.log(createDeck())
 
 // How to populate a new array? Make each suite an array. Each card is an object. ex.  
 // LOL :]
@@ -93,14 +120,18 @@ console.log(createDeck())
 // Deal function ==============================================
 // ============================================================
 //  
-let playerDeal = () => {
-    while (player1.bank > 0) {
-        player1.hand = deck.push()
-        
-    }
-}
+// let dealOneCardPlayer = (player) => {
+//     for (x = 0; x < 2; x++) {
+//         let card = deck1.pop()
+//         player.hand.push(card);
+       
+//     } 
+//     console.log(player.hand)
 
-console.log(playerDeal);
+//  }
+// console.log(dealOneCardPlayer(player1));
+// console.log(player1);
+// console.log(dealOneCardPlayer(dealer));
 
 // Dealers draws 2 cards
 // Player draws 2 cards
@@ -111,7 +142,7 @@ console.log(playerDeal);
 // ============================================================
 // Hit function ===============================================
 // ============================================================
-
+    
 
 
 // ============================================================
@@ -134,3 +165,14 @@ console.log(playerDeal);
 // ============================================================
 // Win function ===============================================
 // ============================================================
+
+
+// be able to interperet it and be able to cite it in regards like a template
+// Identify the actors: the dealer and the player.  Your actors turn into your classes. Your dealer and player are your classes.
+// Actions: The dealer deals cards. There will be a method in the dealer class that deals a card.
+// Each player has a hand. a hand is an attribute of both classes. The class that runs the game is the blackjack class. That has an attribute of deck.
+// Black class is when person hits start game, the black jack game is gonna run.
+// deal 2 cards to each player first.
+// Research extends
+// Code seperate classes that interact with eachother
+//Organize with actor that turns into classes
